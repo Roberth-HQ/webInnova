@@ -1,0 +1,156 @@
+/* ================================
+   QUIÉNES SOMOS
+   ================================ */
+
+.nosotros {
+  padding: 120px 0;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* Encabezado */
+
+.nosotros-header {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.section-label {
+  margin: 0 0 16px;
+
+  color: var(--color-secondary);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.nosotros-header h2 {
+  margin: 0 0 24px;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.section-intro {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Contenido */
+
+.nosotros-grid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 60px;
+
+  align-items: stretch;
+}
+
+.nosotros-content {
+  padding-right: 30px;
+}
+
+.nosotros-content h3 {
+  margin: 0 0 24px;
+
+  font-size: 1.8rem;
+}
+
+.nosotros-content p {
+  margin: 0 0 20px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Tarjeta */
+
+.nosotros-card {
+  padding: 40px;
+
+  background-color: var(--color-surface);
+
+  border-radius: var(--radius-medium);
+
+  box-shadow: var(--shadow-medium);
+
+  transition:
+    background-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.nosotros-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.nosotros-card-number {
+  margin-bottom: 30px;
+
+  color: var(--color-accent);
+
+  font-size: 3rem;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.nosotros-card h3 {
+  margin: 0 0 16px;
+
+  font-size: 1.5rem;
+}
+
+.nosotros-card p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+
+  .nosotros {
+    padding: 80px 0;
+  }
+
+  .nosotros-header {
+    margin-bottom: 50px;
+  }
+
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nosotros-content {
+    padding-right: 0;
+  }
+
+  .nosotros-card {
+    padding: 30px;
+  }
+}

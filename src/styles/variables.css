@@ -1,0 +1,51 @@
+:root {
+  /* Colores principales */
+  --color-primary: #003466;
+  --color-secondary: #1e91d6;
+  --color-accent: #93d151;
+
+  /* Colores generales */
+  --color-background: #ffffff;
+  --color-surface: #f5f7fa;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-white: #ffffff;
+  --color-black: #111111;
+
+  /* Tipografía */
+  --font-main: Arial, Helvetica, sans-serif;
+
+  /* Bordes */
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+
+  /* Sombras */
+  --shadow-small: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.10);
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+
+  /* Colores del Hero */
+--color-hero-start: #003466;
+--color-hero-end: #061a2f;
+--color-hero-text: #ffffff;
+--color-hero-muted: rgba(255, 255, 255, 0.8);
+}
+
+/* Tema oscuro */
+[data-theme="dark"] {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-muted: #cbd5e1;
+
+    --color-hero-start: #071525;
+  --color-hero-end: #020617;
+  --color-hero-text: #ffffff;
+  --color-hero-muted: rgba(255, 255, 255, 0.75);
+}
+

@@ -1,0 +1,233 @@
+/* ================================
+   SERVICIOS
+   ================================ */
+
+.servicios {
+  padding: 120px 0;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+
+/* ================================
+   ENCABEZADO
+   ================================ */
+
+.servicios-header {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+.servicios-header h2 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+}
+
+.servicios-intro {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* ================================
+   TARJETAS
+   ================================ */
+
+.servicios-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.servicio-card {
+  overflow: hidden;
+
+  background-color: var(--color-surface);
+
+  border-radius: var(--radius-medium);
+
+  box-shadow: var(--shadow-small);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    background-color var(--transition-normal);
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: var(--shadow-medium);
+}
+
+
+/* ================================
+   IMAGEN
+   ================================ */
+
+.servicio-image {
+  position: relative;
+
+  height: 260px;
+
+  overflow: hidden;
+
+  background-color: var(--color-primary);
+}
+
+.servicio-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.35),
+      transparent 60%
+    );
+}
+
+.servicio-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.servicio-card:hover .servicio-image img {
+  transform: scale(1.06);
+}
+
+
+/* ================================
+   CONTENIDO
+   ================================ */
+
+.servicio-content {
+  padding: 32px;
+}
+
+.servicio-number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--color-accent);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.servicio-content h3 {
+  margin: 0 0 16px;
+
+  font-size: 1.5rem;
+}
+
+.servicio-content p {
+  min-height: 110px;
+
+  margin: 0 0 24px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+
+/* ================================
+   ENLACE
+   ================================ */
+
+.servicio-link {
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--color-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.servicio-link:hover {
+  color: var(--color-accent);
+
+  transform: translateX(4px);
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 900px) {
+
+  .servicios-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicio-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .servicios {
+    padding: 80px 0;
+  }
+
+  .servicios-header {
+    margin-bottom: 50px;
+  }
+
+  .servicio-content {
+    padding: 28px;
+  }
+
+  .servicio-content p {
+    min-height: auto;
+  }
+}

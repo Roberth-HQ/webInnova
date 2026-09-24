@@ -1,0 +1,171 @@
+/* ================================
+   IDENTIDAD
+   ================================ */
+
+.identidad {
+  padding: 120px 0;
+
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+.identidad-header {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.identidad-header h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+/* ================================
+   MISIÓN Y VISIÓN
+   ================================ */
+
+.identidad-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.identidad-item {
+  position: relative;
+
+  padding: 45px;
+
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-medium);
+
+  transition:
+    background-color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.identidad-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.identidad-number {
+  display: block;
+
+  margin-bottom: 35px;
+
+  color: var(--color-accent);
+
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.identidad-item h3 {
+  margin: 0 0 18px;
+
+  font-size: 1.8rem;
+}
+
+.identidad-item p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ================================
+   VALORES
+   ================================ */
+
+.valores {
+  margin-top: 100px;
+
+  display: grid;
+
+  grid-template-columns: 0.7fr 1.3fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.valores-header h3 {
+  margin: 0;
+
+  font-size: 2.2rem;
+}
+
+.valores-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.valores-list span {
+  padding: 12px 20px;
+
+  border: 1px solid var(--color-secondary);
+
+  border-radius: 100px;
+
+  color: var(--color-text);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.valores-list span:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+
+  .identidad {
+    padding: 80px 0;
+  }
+
+  .identidad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .identidad-item {
+    padding: 30px;
+  }
+
+  .valores {
+    margin-top: 70px;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+}
